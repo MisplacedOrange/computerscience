@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 90%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 4px solid green; 
+}
+
+.navlink {
+    text-decoration: none;
+    color: green;
+    font: bold 16px 'Times New Roman', Times, serif;
+    padding: 8px;
+}
+
+footer {
+    background-color: green;
+    width: 100%;
+    color: white;
+}
+

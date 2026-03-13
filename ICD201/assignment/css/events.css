@@ -12,6 +12,13 @@ body {
     margin: auto;
     max-width: 90%;
 }
+.main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column;
+    margin-top: 64px;
+}
 
 .navbar {
     display: flex;

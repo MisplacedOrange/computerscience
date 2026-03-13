@@ -10,7 +10,14 @@ body {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    max-width: 95%;
+    max-width: 90%;
+}
+.main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column;
+    margin-top: 64px;
 }
 
 .navbar {
@@ -27,3 +34,10 @@ body {
     font: bold 16px 'Times New Roman', Times, serif;
     padding: 8px;
 }
+
+footer {
+    background-color: green;
+    width: 100%;
+    color: white;
+}
+

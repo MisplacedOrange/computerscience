@@ -1,7 +1,11 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 th, td {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     padding: 0 10px 10px 10px;
     text-align: center;
+    background-color: lightcyan;
 }
 
 th:first-child,
@@ -11,6 +15,9 @@ td:first-child {
 }
 
 table {
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: lightblue;
+
+
 }
 

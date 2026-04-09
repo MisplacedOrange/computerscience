@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link href="css/table.css" rel="stylesheet" type="text/css"/>
+        <title>ICD201 - Unit 3.3</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Flower 1
+            let rose_quantity = 70;
+            const rose_price = 8;
+            let rose_value = rose_price * rose_quantity;
+
+            // Flower 2
+            let lily_quantity = 50;
+            const lily_price = 10;
+            let lily_value = lily_price * lily_quantity;
+
+            // Flower 3
+            let tulip_quantity = 120;
+            const tulip_price = 2;
+            let tulip_value = tulip_price * tulip_quantity;
+
+            // Total value of all flowers
+            let flower_total = rose_value + lily_value + tulip_value;
+
+            document.write ("<table><tr>");
+            document.write ("<th>Name</th><th>Unit Price</th><th>Quantity</th><th>Total Price</th></tr>");
+            document.write ("<tr><td>Rose</td><td>", rose_price, "</td><td>", rose_quantity, "</td><td>", rose_value, "</td></tr>");
+            document.write ("<tr><td>Lily</td><td>", lily_price, "</td><td>", lily_quantity, "</td><td>", lily_value, "</td></tr>");   
+            document.write ("<tr><td>Tulip</td><td>", tulip_price, "</td><td>", tulip_quantity, "</td><td>", tulip_value, "</td></tr>");  
+        </script>
+    </body>
+</html>

@@ -1,13 +1,23 @@
-<html>
-    <script type="text/javascript"> 
-
-        {
-            let counter = 1
-            document.write(counter); // -> 1
-            document.write("<br>")
-        }
-        
-        
-
-    </script>     
-</html>
+<script type="text/javascript">
+	{  /*locally declare*/
+		let counter = 1;
+		document.write(counter); // -> 1
+		document.write("<br>");
+		
+	}  //end of the block 
+	   //counter is not existed
+	
+	//Global
+	try{
+		
+		counter = counter + 1;  //->undefine+1
+		
+		//the above code throw an error, 
+		//any lines below will be skipped
+		document.write(counter); // -> undefine
+		document.write("<br>");
+	}catch(e){
+		document.write(e);
+		document.write("<br>");
+	}
+</script>

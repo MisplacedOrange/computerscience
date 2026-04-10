@@ -1,0 +1,21 @@
+<script type="text/javascript">
+//keyword: function, name of function is add
+//two arguments a and b
+function average(a,b){  //task
+	var result = (a+b)/2;
+	return result;
+}
+
+function calculate(){
+	var n1, n2, result;
+	n1 = parseFloat(prompt("Enter number 1"));
+	n2 = parseFloat(prompt("Enter number 2"));
+	//The average(n1,n2) will be replaced by result 
+	result = average(n1,n2); //pass two arguments to add function
+	document.write(result);
+}
+
+//call the function calculate()
+calculate()
+
+</script>

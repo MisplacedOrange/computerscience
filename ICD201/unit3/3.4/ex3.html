@@ -1,0 +1,14 @@
+let height = 200; //global
+{//block 1
+    let weight = 100; //weight is local in block 1
+    {//block 2
+        let info = "tall"; //info is local in block 2, 
+        document.write(height); // -> 200
+        document.write(weight); // -> 100
+        document.write(info); // -> tall
+    }
+    document.write(height); // -> 200
+    document.write(weight); // -> 100
+    document.write(info); // -> Uncaught ReferenceError: info is not defined
+ }
+document.write(weight)

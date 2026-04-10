@@ -1,0 +1,10 @@
+<script type="text/javascript">
+	let counter; //Global
+	document.write(counter); // -> undefined
+	{
+		counter = 1;
+		document.write(counter); // -> 1
+	}
+	counter = counter + 1;
+	document.write(counter); // -> 2
+</script>

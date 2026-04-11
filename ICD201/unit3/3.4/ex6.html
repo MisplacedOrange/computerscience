@@ -1,0 +1,24 @@
+<script language="Javascript">
+	var globalGreeting = "Good ";
+
+	function testFunction() {
+		var localGreeting = "Morning ";
+		document.write("<br> function:");
+		document.write("<br> global Greeting" + globalGreeting);
+		document.write("<br> local Greeting" + localGreeting);
+
+	}
+
+	function main() {
+		try {
+			testFunction();
+			document.write("<br>main program:");
+			document.write(globalGreeting);
+			document.write(localGreeting); // -> Uncaught ReferenceError: localGreeting is not defined
+
+		} catch (e) {
+			document.write(e);
+		}
+	}
+	main();
+</script>

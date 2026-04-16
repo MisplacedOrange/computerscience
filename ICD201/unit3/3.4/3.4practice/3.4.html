@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link href="css/table.css" rel="stylesheet" type="text/css"/>
+        <title>ICD201 - Unit 3.4</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function display() {
+                // Flower 1
+                rose_price = parseFloat(document.getElementById("rose_price").value);
+                rose_quantity = parseInt(document.getElementById("rose_quantity").value);
+                rose_value = rose_price * rose_quantity;
+
+                // Flower 2
+                lily_price = parseFloat(document.getElementById("lily_price").value);
+                lily_quantity = parseInt(document.getElementById("lily_quantity").value);
+                lily_value = lily_price * lily_quantity;
+
+                // Flower 3
+                tulip_price = parseFloat(document.getElementById("tulip_price").value);
+                tulip_quantity = parseInt(document.getElementById("tulip_quantity").value);
+                tulip_value = tulip_price * tulip_quantity;
+
+                document.write("<table><tr>");
+                document.write("<th>Name</th><th>Unit Price</th><th>Quantity</th><th>Total Price</th></tr>");
+                document.write("<tr><td>Rose</td><td>", rose_price, "</td><td>", rose_quantity, "</td><td>$", rose_value, "</td></tr>");
+                document.write("<tr><td>Lily</td><td>", lily_price, "</td><td>", lily_quantity, "</td><td>$", lily_value, "</td></tr>");   
+                document.write("<tr><td>Tulip</td><td>", tulip_price, "</td><td>", tulip_quantity, "</td><td>$", tulip_value, "</td></tr>");  
+                document.write("<tr><td>Total</td><td colspan = 3>$", flower_total, "</td></tr>");
+                document.write("</table>");
+            }
+
+            
+        </script>
+        <fieldset>
+                <p> Rose: </p>
+                <p>Unit Price: <input id="rose_price" value=""> </input></p>
+                <p>Quantity: <input id="rose_quantity" value=""> </input></p>
+
+                <p> Lily: </p>
+                <p>Unit Price: <input id="lily_price" value=""> </input></p>
+                <p>Quantity: <input id="lily_quantity" value=""> </input></p>
+
+                <p> Tulip: </p>
+                <p>Unit Price: <input id="tulip_price" value=""> </input></p>
+                <p>Quantity: <input id="tulip_quantity" value=""> </input></p>
+                <p><button type="button" onClick="display()">Calculate</button></p>
+        </fieldset>
+    </body>
+    
+</html>

@@ -1,0 +1,19 @@
+<html>
+<script type="text/javascript">
+	// to do this you needs to create two same-sized buttons in cooltext
+	// call them button1.jpg and button2.jpg ...save in the same spot as this code.
+
+	function rollOn(obj) {
+		obj.src = obj.src.replace(/button1.png/, 'button2.png');
+	}
+	function rollOff(obj) {
+		obj.src = obj.src.replace(/button2.png/, 'button1.png');
+	}
+</script>
+
+<a href="http://www.google.com"> 
+<img id="obj" src="img/button1.png"
+	onmouseover="rollOn(obj)" 
+	onmouseout="rollOff(obj)" 
+	vspace="0" hspace="0"/></a>
+</html>

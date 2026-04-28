@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>Insert title here</title>
+            
+        </head>
+        <body>
+            <script>
+            /*
+            
+            d) Calculate the total number of pages in all the books from the collection.*/
+            
+            let
+            library = [ {
+            	title: "Speaking JavaScript",
+            	author: "Axel Rauschmayer",
+            	pages: 460
+            }, {
+            	title: "Programming JavaScript Applications",
+            	author: "Eric Elliott",
+            	pages: 254
+            }, {
+            	title: "Understanding ECMAScript 6",
+            	author: "Nicholas C. Zakas",
+            	pages: 352
+            }
+            ];
+            //Create an object of a book and add it to library, and list library
+            let a_book = {
+            		title: "Learning JavaScript Design Patterns",
+            		author: "Addy Osmani",
+            		pages: 254
+            }
+        
+            library.push(a_book);
+            document.write(library.length);
+            let b = library[library.length-1];
+            document.write("<br>" + b.title);
+        
+            //slice(initial, condition)
+            //  0,  1, 2, length-1
+            // [b1, b2,b3, b4]
+        
+            let num_books = library.length;
+            let last_two = library.slice (num_books-2,num_books);
+            document.write("<br>" + last_two.length);
+            document.write("<br>" + last_two[0].title);
+            document.write("<br>" + last_two[1].title);
+        
+            //remove first book in library
+            let rem_book = library.shift();
+            document.write("<br>" + rem_book.title);
+            document.write("<br>" + library.length);
+        
+            </script>
+        </body>
+    </html>

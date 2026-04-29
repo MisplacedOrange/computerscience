@@ -1,0 +1,16 @@
+<script>
+let a = true;
+document.write(a); // -> true
+a &&= false;       // a= a && false
+document.write(a); // -> false
+
+let b = false;
+document.write(b); // -> false
+b ||= true;       //b = b || true
+document.write(b); // -> true
+//AND Table (&&)       OR Table (||)
+//T and T = T       T or T = T
+//F and T = F       F or T = T
+//T and F = F       T or F = T 
+//F and F = F       F or F = F
+</script>

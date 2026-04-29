@@ -1,0 +1,35 @@
+<script >
+/*
+Write a program that asks the user for the following inputs:
+	+  Age
+	+  Whether they are a student (yes or no)
+	+  Whether it is the weekend (yes or no)
+
+A user gets a discount if:
+	+ They are under 18 AND a student
+	OR
+	+ It is the weekend AND they are a student
+ */
+ //get the user inputs
+
+ let age = prompt("Enter your age: ");
+ let isHoliday = confirm("is it a holiday?");
+ let hasMembership = confirm("Do you have a membership?");
+
+ if (age >= 65 && hasMembership || isHoliday && hasMembership){
+     document.write("You get a discount!");
+ } else {
+     document.write("You dont get a discount!");
+ }
+ 
+
+ 
+</script>
+<!-- 
+		 if is calculated and needs the cartValue to be over or equal to 300, or the 
+		 points to be greater than or equal to 500.
+		 0 || 0 = false     0 && 0 = false
+		 0 || 1 = true      0 && 1 = false
+		 1 || 0 = true      1 && 0 = false
+		 1 || 1 = true      1 && 1 = true
+		 -->

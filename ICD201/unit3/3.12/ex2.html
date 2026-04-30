@@ -1,0 +1,13 @@
+<script type="text/javascript">
+//declare two variables continueLoop and counter
+//Initialize continueLoop to true and counter to 1
+let continueLoop = true;
+let counter = 1;
+
+//continueLoop not equal false, mean equal true
+while (continueLoop) {
+	let msg = "[" + counter + "] continue the loop?";
+    continueLoop = confirm(msg); //either false or true
+    counter = counter + 1;
+}
+document.write("Still Continuing:" + continueLoop + "<br> counter:" + counter)

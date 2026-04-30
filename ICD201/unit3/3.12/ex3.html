@@ -1,0 +1,17 @@
+</script>
+<script type="text/javascript">
+let continueLoop;
+let counter = 1;
+
+//Iterate at least one
+do {
+	let msg = "[" + counter + "]" + "Continue the loop?";
+	
+ 	continueLoop = confirm(msg); 
+ 	
+ 	//! operator can reverse the value from true to false or vice versa
+} while (continueLoop);
+
+document.write(" continueLoop :" + continueLoop + "<br> counter:" + counter);
+
+</script>

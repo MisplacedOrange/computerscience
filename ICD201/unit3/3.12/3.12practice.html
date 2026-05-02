@@ -1,0 +1,126 @@
+<html>
+    <body>
+        <script type = "text/javascript">
+
+            function questionone() {
+                let movies = []
+                while (true) {
+                    let movie = prompt("Name of your movie");
+                    if (movie == null) {
+                        break;
+                    }
+                    let rating = prompt("Rating of your movie");
+                    if (rating == null) {
+                        break;
+                    }
+
+                    movies.push({
+                        title: movie,
+                        rating: parseFloat(rating)
+                    });
+                }
+
+                document.write("<h3>Movies with ratings below 7</h3>");
+                for (let i = 0; i < movies.length; i++) {
+                    if (movies[i].rating < 7){
+                        document.write(movies[i].title + " Rating: " + movies[i].rating + "<br>")
+                    }
+                }
+                document.write("<h3>Movies with ratings above 7</h3>");
+                for (let i = 0; i < movies.length; i++) {
+                    if (movies[i].rating >= 7){
+                        document.write(movies[i].title + " Rating: " + movies[i].rating + "<br>")
+                    }
+                }
+            }
+
+            function questiontwo() {
+                let vessel = {
+                    LATITUDE: 40.07288,
+                    LONGITUDE: 154.48535,
+                    COURSE: 285.6,
+                    SPEED: 14.0,
+                    IMO: 9175717,
+                    NAME: "MARENO"
+                };
+
+                for (let key in vessel) {
+                    document.write(key + ": " + vessel[key] + "<br>");
+                }
+            }
+
+            function questionthree() {
+                while (true) {
+                    let val1 = prompt("Enter first number (or 'q' to quit):");
+                    if (val1 === null || val1.toLowerCase() === 'q') break;
+
+                    let val2 = prompt("Enter second number (or 'q' to quit):");
+                    if (val2 === null || val2.toLowerCase() === 'q') break;
+
+                    let op = prompt("Enter operator (+, -, *, /) (or 'q' to quit):");
+                    if (op === null || op.toLowerCase() === 'q') break;
+
+                    let num1 = parseFloat(val1);
+                    let num2 = parseFloat(val2);
+                    let result;
+
+                    if (op == '+') {
+                        result = num1 + num2;
+                        document.write(result); 
+                    } else if (op == '-') {
+                        result = num1 - num2;
+                        document.write(result); 
+                    } else if (op == '*') {
+                        result = num1 * num2;
+                        document.write(result); 
+                    } else if (op == '/') {
+                        result = num1 / num2;
+                        document.write(result); 
+                    } else {
+                        document.write("Error, Try again!");
+                    }
+                }           
+            } 
+
+            function questionfour() {
+                let contacts = [
+                    { name: "John Doe", phone: "123-456-7890" },
+                    { name: "Jane Smith", phone: "123-456-7890" }
+                ];
+                let running = true;
+                while (running) {
+                    let action = prompt("Choose an action: first, last, all, new, quit").toLowerCase();
+                
+                    if (action == "first") {
+                        document.write(contacts[i].name + ": " + contacts[i].phone);
+                    } 
+                    else if (action == "last") {
+                        document.write(contacts[contacts.length - 1] + ": " + contacts[contacts.length - 1]);
+                    } 
+                    else if (action == "all") {
+                        for (let i = 0; i < contacts.length; i++) {
+                            document.write(contacts[i].name + ": " + contacts[i].phone);
+                        }
+                    } 
+                    else if (action == "new") {
+                        let name = prompt("Enter name:");
+                        let phone = prompt("Enter phone:");
+                        contacts.push({ name: name, phone: phone });
+                    } 
+                    else if (action == "quit") {
+                        running = false;
+                    } 
+                    else {
+                        document.write("N/A TRY AGAIN");
+                        break;
+                }
+            } 
+        }
+            questionone();
+            questiontwo();
+            questionthree();
+            questionfour();
+
+        </script>
+    </body>
+</html>

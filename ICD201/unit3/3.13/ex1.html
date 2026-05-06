@@ -1,0 +1,92 @@
+<script>
+/*We can enhance our contact list program by incorporating loops. You can now display not
+just the first or last contact, but all contacts in the list, no matter how many there are.
+Additionally, try to enclose the entire program within a loop so that the user is repeatedly
+prompted to choose what they want to do.
+• display the first contact (first)
+• display the last contact (last)
+• display all contacts (all)
+• add a new contact (new)
+• exit the program (quit)
+After executing the selected action, the program will allow the user to choose again. The
+program should only end the actions after the user gives a specific command, such as 'quit'.*/
+function displayContact(contacts, index){
+	let len = contacts.length;
+	if (len>0){
+		let contact = contacts[0].name + "," + contacts[0].phone + "," + contacts[0].email;
+		alert(contact);
+	}else{
+		alert("No contact to display");
+	}
+}
+
+function displayContactsAll(contacts){
+	let len = contacts.length;
+	let contact ="";
+	for (let i=0;i<len;i++){
+		contact = contact + contacts[i].name + "," + contacts[i].phone + "," + contacts[i].email + "\n";
+		
+	}
+	alert(contact);
+}
+function addContact(contacts){
+	let contact ={};
+	let name, email, phone;
+	name = prompt("Enter a name");
+	email = prompt("Enter an email");
+	phone = prompt("Enter a phone number");
+	
+	if (name!="" && email !="" && phone!=""){
+		contact.name = name;
+		contact.phone = phone;
+		contact.email = email;
+	}
+	contacts.push(contact);
+}
+
+function contactsList(){
+	let contacts =[
+		{
+			name: "Kim Huynh",
+			phone: "456-456-4567",
+			email: "kieu.huynh@gapps.yrdsb.ca"
+		},
+		{	
+			name: "Ethan",
+			phone: "123-232-3434",
+			email: "23423423@gapps.yrdsb.ca"
+		},
+		{
+			name: "Yuxin",
+			phone: "343-445-4354",
+			email: "45435345@gapps.yrdsb.ca"
+		}	
+	];
+	return contacts;
+}
+function menu(){
+	let choice, message, contacts;
+	contacts = contactsList();
+	do{
+		
+		message = 	"Enter 1 to display the first contact (first)\n" + 
+					"Enter 2 to display the last contact (last) \n" +
+					"Enter 3 to display all contacts (all)\n"+
+					"Enter 4 to add a new contact (new)\n"+
+					"Enter any number to exit the program (quit)\n";
+		choice = (prompt(message));
+		
+		if (choice =="1"){
+			displayContact(contacts, 0);
+		}else if (choice =="4"){
+			addContact(contacts);
+		}else if (choice =="3"){
+			displayContactsAll(contacts);
+		}
+	}while(choice == "1" || choice=="2" || choice =="3" || choice=="4");
+}
+
+
+
+menu()
+</script>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Example 2</title>
+<script>
+function display(){
+	let msg = document.getElementById("view").value;
+	document.getElementById("d").value = msg;
+}
+</script>
+</head>
+<body>
+<select id="view">
+<option value="Item_1">Item 1</option>
+<option value="Item_2">selected>Item 2</option>
+<option value="Item_3">Item 3</option>
+</select>
+
+<button onClick="display();">Display</button>
+<p id="d"></p>
+</body>
+</html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Example 2</title>
+<script>
+function display(){
+	let msg = document.getElementById("view").value;
+	document.getElementById("d").value = msg;
+}
+</script>
+</head>
+<body>
+<select id="view">
+<option value="Item_1">Item 1</option>
+<option value="Item_2" selected>Item 2</option>
+<option value="Item_3">Item 3</option>
+</select>
+
+<button onClick="display();">Display</button>
+<p id="d"></p>
+</body>
+</html>

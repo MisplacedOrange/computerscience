@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Example 1</title>
+<script>
+function display(){
+	let text = document.getElementById("txt").value;
+	document.getElementById("d").innerHTML = "<b>" + text + "</b>";
+}
+</script>
+</head>
+<body>
+Message <input id="txt" size=20/>
+<button onClick="display();">Display</button>
+<p id="d"></p>
+</body>
+</html>

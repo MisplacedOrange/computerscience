@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Example 3</title>
+<script>
+	function display() {
+		let values = []; //declare an empty array
+
+		let checkbox = document.getElementById("c1"); //get an object of input, where type=checkbox 
+		let value = checkbox.value;
+		if (checkbox.checked)
+			values.push(value);
+
+		checkbox = document.getElementById("c2");
+		value = checkbox.value;
+		if (checkbox.checked)
+			values.push(value);
+
+		checkbox = document.getElementById("c3");
+		value = checkbox.value;
+		if (checkbox.checked)
+			values.push(value);
+
+		document.getElementById("text").innerHTML = values;
+
+	}
+</script>
+</head>
+<body>
+
+	<p>Select your favorite colors:</p>
+	<input type="checkbox" value="red" id="c1">
+	<label for="c1">Red </label>
+	<input type="checkbox" value="green" id="c2">
+	<label for="c2"> Green </label>
+	<input type="checkbox" value="blue" id="c3">
+	<label for="c3">Blue</label>
+	<p>
+		<button onClick="display();">Get Selected Colors</button>
+	</p>
+	<p id="text" />
+
+
+</body>
+</html>

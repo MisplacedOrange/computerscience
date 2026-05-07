@@ -1,14 +1,43 @@
-<script type="text/javascript">
-//declare two variables continueLoop and counter
-//Initialize continueLoop to true and counter to 1
-let continueLoop = true;
-let counter = 1;
+<script>
+/*Create a simple calculator application. Prompt the user for the following inputs, one at a time:
+two numbers and a character representing a mathematical operation, such as "+", "-", "*", "/". If
+the user inputs valid data, perform the calculation and display the result. If the inputs are
+invalid, show an error message. Remember that the value returned by the prompt function is a
+string type. Use the Number.isNaN method to verify if your converted value is a valid number;
+for instance, Number.isNaN(10) returns false, whereas Number.isNaN(NaN) returns true.*/
 
-//continueLoop not equal false, mean equal true
-while (continueLoop) {
-	let msg = "[" + counter + "] continue the loop?";
-    continueLoop = confirm(msg); //either false or true
-    counter = counter + 1;
+function calculate(number1, number2, operator)
+{
+	let result;
+	if (operator =="+"){
+		result = number1 + number2;	
+	}else if(operator =="-"){
+		result = number1 - number2;
+	}else if (operator =="*"){
+		result = number1 * number2;
+	}else if (operator =="/"){
+		result = number1 / number2;
+	}
+	document.write( number1 + operator + number2 + "="+ result);
 }
-document.write("Still Continuing:" + continueLoop + "<br> counter:" + counter)
+function isNaO(operator){
+	if (operator !="+" && operator !="-" && operator !="*" && operator !="/"){
+		return true;
+	}else{
+		return false;
+	}
+}
+function getInputs(){
+	let num1, num2, op;
+	num1 = Number(prompt("Enter a number:"));
+	num2 = Number(prompt("Enter a second number:"));
+	op = prompt("Enter an operator:");
+	
+	if (Number.isNaN(num1) || Number.isNaN(num2) || isNaO(op)){
+		document.write("Invalid inputs");
+	}else{
+		calculate(num1, num2, op);
+	}
+}
+getInputs();
 </script>

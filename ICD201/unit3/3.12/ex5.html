@@ -1,10 +1,16 @@
 <script type="text/javascript">
-                 // 0 1   2    3
-	let values = [10, 30, 50, 100]; // values[0] => 10, values[3] => 100
-	let len = values.length;
+let i = 0;
+
+//An infinite loop 
+while (true) {
+	document.write("<br>" + i);
 	
-	for (let i=0;i<len;i++){
-		document.write("<br>"+ values[i]);
+	if (i == 5) {
+		break;
 	}
-	
+	i++; // this will be skipped when i=5
+}
+
+alert("break" + i );//the loop with the break
+
 </script>

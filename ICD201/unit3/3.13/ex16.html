@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+
+<script>
+function display() {
+	//get an array of input named "food"
+    let radioBox = document.querySelector('input[name="food"]:checked');
+	
+	//get an object that is selected
+    let label = document.querySelector('label[for="' + radioBox.id + '"]');
+    document.getElementById("text").innerText = label.innerText;
+}
+</script>
+<br><label >Food</label>
+
+<br><input type="radio" name="food" id="r1"/><label for="r1">Chicken</label>
+<br><input type="radio" name="food" id="r2"/><label for="r2">Beef</label>
+<br><input type="radio" name="food" id="r3" checked /><label for="r3">Pork</label>
+
+<br><button type="button" onClick="display()">Button</button>
+<p id="text"></p>
+
+</body>
+</html>

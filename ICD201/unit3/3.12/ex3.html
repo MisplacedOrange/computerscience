@@ -1,17 +1,27 @@
-</script>
-<script type="text/javascript">
-let continueLoop;
-let counter = 1;
+<script>
+/*We can enhance our contact list program by incorporating loops. You can now display not
+just the first or last contact, but all contacts in the list, no matter how many there are.
+Additionally, try to enclose the entire program within a loop so that the user is repeatedly
+prompted to choose what they want to do.
+• display the first contact (first)
+• display the last contact (last)
+• display all contacts (all)
+• add a new contact (new)
+• exit the program (quit)
+After executing the selected action, the program will allow the user to choose again. The
+program should only end the actions after the user gives a specific command, such as 'quit'.*/
 
-//Iterate at least one
-do {
-	let msg = "[" + counter + "]" + "Continue the loop?";
-	
- 	continueLoop = confirm(msg); 
- 	
- 	//! operator can reverse the value from true to false or vice versa
-} while (continueLoop);
+function menu(){
+	let choice, message;
+	do{
+		message = 	"Enter 1 to display the first contact (first)\n" + 
+					"Enter 2 to display the last contact (last) \n" +
+					"Enter 3 to display all contacts (all)\n"+
+					"Enter 4 to add a new contact (new)\n"+
+					"Enter 5 to exit the program (quit)\n";
+		choice = (prompt(message));
+	}while(choice != "5");
+}
 
-document.write(" continueLoop :" + continueLoop + "<br> counter:" + counter);
-
+menu()
 </script>

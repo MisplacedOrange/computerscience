@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Registration</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/> 
+</head>
+<body>
+    <script>
+
+        const firstname = element.getElementById('firstname');
+        const lastname = element.getElementById('lastname');
+        const address1 = element.getElementById('address1');
+        const address2 = element.getElementById('address2');
+        const city = element.getElementById('city');
+        const province = element.getElementById('province');
+        const postal_code = element.getElementById('postalcode');
+        const country = element.getElementById('country');
+
+        const purchased_date = element.getElementById('purchaseddate');
+        const serial_number = element.getElementById('serial');
+
+        function send() {
+            alert(firstname);
+        }
+
+        function setDate() {
+            const date = new Date();
+    
+            const day = today.getDate();
+            const month = today.getMonth() + 1;
+            const year = today.getFullYear();
+
+            const formatteddate = month + "/" + day + "/" + year;
+
+            document.getElementById('purchasedate').value = formatteddate;
+        }
+
+
+    </script>
+    <h1>Product Registration</h1>
+    
+    <form class="hero-container">
+        <div class="form-section">
+
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" size="20" maxlength="15" required/>
+            
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" size="20" required/>
+            <br><br>
+
+            <label for="address1">Address #1</label>
+            <input type="text" id="address1" size="60" required/>
+            <br><br>
+
+            <label for="address2">Address #2</label>
+            <input type="text" id="address2" size="60" />
+            <br><br>
+
+            <label for="city">City</label>
+            <input type="text" id="city" size="15" required/>
+
+            <label for="province">Province</label>
+            <input type="text" id="province" size="5" required/>
+
+            <label for="postalcode">Postal Code</label>
+            <input type="text" id="postalcode" size="10" required/>
+            <br><br>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" size="30" required/>
+        </div>
+
+        <hr>
+
+        <div class="purchase-section">
+
+            <label for="itempurchased">Item Purchased</label>
+            <select id="itempurchased">
+                <option value="lanpass115">LanPass 115</option>
+                <option value="item2">Test Item 2</option>
+            </select>
+
+            <label for="purchasedate">Purchased Date</label>
+            <input type ="text" id="purchasedate" value = "Today's Date.." readonly/>
+
+            <br>
+            
+            <label for="serial">Serial Number</label>
+            <input type="text" id="serial" required/>
+        </div>
+
+        <hr>
+
+        <div class="options-section">
+
+            <fieldset>
+                <legend>Used For (check one)</legend>
+                <input type="radio" name="use" id="home" value="home"> <label for="home">Home</label><br>
+                <input type="radio" name="use" id="business" value="business" checked> <label for="business">Business</label><br>
+                <input type="radio" name="use" id="religous" value="religous"> <label for="religous">Religious or Charitable Institution</label><br>
+                <input type="radio" name="use" id="govt" value="govt"> <label for="govt">Government</label><br>
+                <input type="radio" name="use" id="edu" value="edu"> <label for="edu">Educational Institution</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Network Operating System (check all that apply)</legend>
+                <input type="checkbox" id="netware"> <label for="netware">Netware</label><br>
+                <input type="checkbox" id="vines"> <label for="vines">Banyan Vines</label><br>
+                <input type="checkbox" id="windows"> <label for="windows">Windows</label><br>
+                <input type="checkbox" id="ibmlan"> <label for="ibmlan">IBM Lan Server</label><br>
+                <input type="checkbox" id="pcnfs"> <label for="pcnfs">PC/NFS</label>
+            </fieldset>
+        </div>
+
+        <hr>
+
+        <div class="comments-section">
+            <label for="comments">Comments</label>
+            <textarea id="comments" rows="4" cols="50"></textarea>
+            <br>
+            <div class="button-row">
+                <button type="button">Send Registration</button>
+                <button type="button">Cancel</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

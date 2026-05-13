@@ -2,105 +2,66 @@
 <html>
 <head>
     <title>Product Registration</title>
-    <link href="css/index.css" rel="stylesheet" type="text/css"/> 
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <script>
-
-        const firstname = element.getElementById('firstname');
-        const lastname = element.getElementById('lastname');
-        const address1 = element.getElementById('address1');
-        const address2 = element.getElementById('address2');
-        const city = element.getElementById('city');
-        const province = element.getElementById('province');
-        const postal_code = element.getElementById('postalcode');
-        const country = element.getElementById('country');
-
-        const purchased_date = element.getElementById('purchaseddate');
-        const serial_number = element.getElementById('serial');
-
-        function send() {
-            alert(firstname);
-        }
-
-        function setDate() {
-            const date = new Date();
-    
-            const day = today.getDate();
-            const month = today.getMonth() + 1;
-            const year = today.getFullYear();
-
-            const formatteddate = month + "/" + day + "/" + year;
-
-            document.getElementById('purchasedate').value = formatteddate;
-        }
-
-
-    </script>
     <h1>Product Registration</h1>
-    
-    <form class="hero-container">
-        <div class="form-section">
 
-            <label for="firstname">First Name</label>
-            <input type="text" id="firstname" size="20" maxlength="15" required/>
-            
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" size="20" required/>
-            <br><br>
+    <form class="hero-container" id="registrationForm">
+            <div class="row">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" maxlength="15" required>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" required>
+            </div>
 
-            <label for="address1">Address #1</label>
-            <input type="text" id="address1" size="60" required/>
-            <br><br>
+            <div class="row">
+                <label for="address1">Address #1</label>
+                <input type="text" id="address1" required>
+            </div>
 
-            <label for="address2">Address #2</label>
-            <input type="text" id="address2" size="60" />
-            <br><br>
+            <div class="row">
+                <label for="address2">Address #2</label>
+                <input type="text" id="address2">
+            </div>
 
-            <label for="city">City</label>
-            <input type="text" id="city" size="15" required/>
+            <div class="row">
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+                <label for="province">Province</label>
+                <input type="text" id="province" required>
+                <label for="postalcode">Postal Code</label>
+                <input type="text" id="postalcode" required>
+            </div>
 
-            <label for="province">Province</label>
-            <input type="text" id="province" size="5" required/>
+            <div class="row">
+                <label for="country">Country</label>
+                <input type="text" id="country" required>
+            </div>
 
-            <label for="postalcode">Postal Code</label>
-            <input type="text" id="postalcode" size="10" required/>
-            <br><br>
+            <hr>
 
-            <label for="country">Country</label>
-            <input type="text" id="country" size="30" required/>
-        </div>
+            <div class="row">
+                <label for="itempurchased">Item Purchased</label>
+                <select id="itempurchased">
+                    <option>LanPass 115</option>
+                    <option>LanPass 220</option>
+                </select>
+                <label for="purchasedate">Purchased Date</label>
+                <input type="text" id="purchasedate" readonly>
+                <label for="serial">Serial Number</label>
+                <input type="text" id="serial" required>
+            </div>
 
-        <hr>
-
-        <div class="purchase-section">
-
-            <label for="itempurchased">Item Purchased</label>
-            <select id="itempurchased">
-                <option value="lanpass115">LanPass 115</option>
-                <option value="item2">Test Item 2</option>
-            </select>
-
-            <label for="purchasedate">Purchased Date</label>
-            <input type ="text" id="purchasedate" value = "Today's Date.." readonly/>
-
-            <br>
-            
-            <label for="serial">Serial Number</label>
-            <input type="text" id="serial" required/>
-        </div>
-
-        <hr>
-
-        <div class="options-section">
+            <hr>
 
             <fieldset>
                 <legend>Used For (check one)</legend>
-                <input type="radio" name="use" id="home" value="home"> <label for="home">Home</label><br>
-                <input type="radio" name="use" id="business" value="business" checked> <label for="business">Business</label><br>
-                <input type="radio" name="use" id="religous" value="religous"> <label for="religous">Religious or Charitable Institution</label><br>
-                <input type="radio" name="use" id="govt" value="govt"> <label for="govt">Government</label><br>
-                <input type="radio" name="use" id="edu" value="edu"> <label for="edu">Educational Institution</label>
+                <input type="radio" name="use" id="home" value="Home"> <label for="home">Home</label><br>
+                <input type="radio" name="use" id="business" value="Business" checked> <label for="business">Business</label><br>
+                <input type="radio" name="use" id="religious" value="Religious or Charitable Institution"> <label for="religious">Religious or Charitable Institution</label><br>
+                <input type="radio" name="use" id="govt" value="Government"> <label for="govt">Government</label><br>
+                <input type="radio" name="use" id="edu" value="Educational Institution"> <label for="edu">Educational Institution</label>
             </fieldset>
 
             <fieldset>
@@ -111,20 +72,55 @@
                 <input type="checkbox" id="ibmlan"> <label for="ibmlan">IBM Lan Server</label><br>
                 <input type="checkbox" id="pcnfs"> <label for="pcnfs">PC/NFS</label>
             </fieldset>
-        </div>
 
-        <hr>
-
-        <div class="comments-section">
-            <label for="comments">Comments</label>
-            <textarea id="comments" rows="4" cols="50"></textarea>
-            <br>
-            <div class="button-row">
-                <button type="button">Send Registration</button>
-                <button type="button">Cancel</button>
+            <div class="row comments">
+                <label for="comments">Comments</label>
+                <textarea id="comments" rows="5"></textarea>
             </div>
-        </div>
+
+            <button type="button" onclick="send()">Submit</button>
+            <button type="button" onclick="cancel()">Cancel</button>
     </form>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+
+        function setDate() {
+            document.getElementById('purchasedate').value = new Date().toLocaleDateString();
+        }
+
+        function send() {
+            const output =
+                '<h1>Submitted Information</h1>' +
+                '<p>First Name: ' + document.getElementById('firstname').value + '</p>' +
+                '<p>Last Name: ' + document.getElementById('lastname').value + '</p>' +
+                '<p>Address #1: ' + document.getElementById('address1').value + '</p>' +
+                '<p>Address #2: ' + document.getElementById('address2').value + '</p>' +
+                '<p>City: ' + document.getElementById('city').value + '</p>' +
+                '<p>Province: ' + document.getElementById('province').value + '</p>' +
+                '<p>Postal Code: ' + document.getElementById('postalcode').value + '</p>' +
+                '<p>Country: ' + document.getElementById('country').value + '</p>' +
+                '<p>Item Purchased: ' + document.getElementById('itempurchased').value + '</p>' +
+                '<p>Purchased Date: ' + document.getElementById('purchasedate').value + '</p>' +
+                '<p>Serial Number: ' + document.getElementById('serial').value + '</p>' +
+                '<p>Used For: ' + document.querySelector('input[name="use"]:checked').nextElementSibling.textContent + '</p>' +
+                '<p>Netware: ' + (document.getElementById('netware').checked ? 'checked' : 'not checked') + '</p>' +
+                '<p>Banyan Vines: ' + (document.getElementById('vines').checked ? 'checked' : 'not checked') + '</p>' +
+                '<p>Windows: ' + (document.getElementById('windows').checked ? 'checked' : 'not checked') + '</p>' +
+                '<p>IBM Lan Server: ' + (document.getElementById('ibmlan').checked ? 'checked' : 'not checked') + '</p>' +
+                '<p>PC/NFS: ' + (document.getElementById('pcnfs').checked ? 'checked' : 'not checked') + '</p>' +
+                '<p>Comments: ' + document.getElementById('comments').value + '</p>';
+
+            document.write(output);
+        }
+
+        function cancel() {
+            form.reset();
+            setDate();
+        }
+
+        setDate();
+    </script>
 
 </body>
 </html>

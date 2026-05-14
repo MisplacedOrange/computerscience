@@ -1,0 +1,152 @@
+<!--
+  ID Reference:
+  #category, #manufacturer, #model, #year
+  #numOfSeats, #numOfDoors, #price-per-day
+  #pickup-date, #return-date
+  #gps, #child-seat, #extra-driver, #insurance
+  #subtotal
+  #add-booking, #remove-booking, #cancel, #proceed
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Page</title>
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Car Rental - Order Page</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="order-wrapper">
+
+      <!-- ── Left: Form ── -->
+      <div class="order-form">
+
+        <!-- Car Filter-->
+        <section id="car-filter">
+          <h2>Select a Car</h2>
+
+        <!-- Category-->
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="">-- Select Category --</option>
+            <option value="economy">Economy</option>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="luxury">Luxury</option>
+          </select>
+           <!-- Manufacturer-->
+          <label for="manufacturer">Manufacturer:</label>
+          <select id="manufacturer" name="manufacturer">
+            <option value="">-- Select Manufacturer --</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="mazda">Mazda</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="ford">Ford</option>
+            <option value="jeep">Jeep</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes</option>
+          </select>
+           <!-- Model-->
+          <label for="model">Model:</label>
+          <select id="model" name="model">
+            <option value="">-- Select Model --</option>
+          </select>
+           <!-- Year-->
+          <label for="year">Year:</label>
+          <select id="year" name="year">
+            <option value="">-- Select Year --</option>
+            <option value="2026">2026</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+        </section>
+
+        <!-- Car Details: seats, doors, price per day -->
+        <section id="car-details">
+          <h2>Car Details</h2>
+          <p>Seats: <span id="numOfSeats">--</span></p>
+          <p>Doors: <span id="numOfDoors">--</span></p>
+          <p>Price per Day: $<span id="price-per-day">--</span></p>
+        </section>
+
+        <!-- Rental Dates: pickup and return -->
+        <section id="rental-dates">
+          <h2>Rental Dates</h2>
+
+          <label for="pickup-date">Pickup Date:</label>
+          <input type="date" id="pickup-date" name="pickup-date" />
+
+          <label for="return-date">Return Date:</label>
+          <input type="date" id="return-date" name="return-date" />
+        </section>
+
+        <!-- Add-ons: GPS, child seat, extra driver, insurance -->
+        <section id="add-ons">
+          <h2>Optional Add-ons</h2>
+
+          <label>
+            <input type="checkbox" id="gps" name="gps" />
+            GPS
+          </label>
+
+          <label>
+            <input type="checkbox" id="child-seat" name="child-seat" />
+            Child Seat
+          </label>
+
+          <label>
+            <input type="checkbox" id="extra-driver" name="extra-driver" />
+            Extra Driver
+          </label>
+
+          <div id="insurance-selection">
+            <label for="insurance">Insurance Plan:</label>
+            <select id="insurance" name="insurance">
+              <option value="0">Basic Insurance - $0/day</option>
+              <option value="15">Standard Insurance - $15/day</option>
+              <option value="30">Premium Insurance - $30/day</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Summary: calculated subtotal -->
+        <section id="summary">
+          <h2>Summary</h2>
+          <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        </section>
+
+        <!-- Booking Controls: add, remove, cancel, proceed -->
+        <section id="booking-controls">
+          <button id="add-booking">Add Booking</button>
+          <button id="remove-booking">Remove Booking</button>
+          <button id="cancel" >Cancel</button>
+          <button id="proceed" disabled>Proceed</button>
+        </section>
+
+      </div>
+
+      <!-- ── Right: Image ── -->
+      <div class="order-image">
+        <img src="./images/car-rental.jpg" alt="Car Rental" />
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Car Rental. All rights reserved.</p>
+  </footer>
+
+  <script src="order.js"></script>
+</body>
+</html>

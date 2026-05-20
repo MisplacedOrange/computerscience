@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Display Page</title>
+	
+<style>
+strong {
+	font-size: 23px;
+}
+h2,h3,h4 {
+	padding: 5px;
+	text-align: center;
+}
+.divider {
+	text-align: center;
+}
+.divider-line{
+	text-align:center}
+.section-title{
+	font-weight: bold;
+	}
+div{
+	text-align:center;}
+button{
+	margin: left;
+	text-align: center;}
+.receipt-box{
+	margin: 0 auto;
+	background-color: white;
+	padding: 20px;
+	font-family: Courier New;
+	}
+</style>
+</head>
+<body onload="displayReceipt();">
+<div class="receipt-box">
+	<p>========================================================================</p>
+	<h2 style="color: red;">Car Rental Receipt</h2>
+	<p>========================================================================</p>
+	
+	<div class="section-title"><b>Car Details</b></div>
+	<p>Car: <span id="car-name">--</span></p>
+	<p>Booking Date: <span id="booking-date">--</span></p>
+	<p>Pickup Date: <span id="pickup-date-display">--</span></p>
+	<p>Return Date: <span id="return-date-display">--</span></p>
+	<p>Category: <span id="category">--</span></p>
+	<p>Daily Rate: $<span id="daily_rate">--</span></p>
+	<p>Rental Days: <span id="rental_days">--</span> days</p>
+	
+	<p>----------------------------------------------------------------------------------</p>
+	<div class="section-title"><b> Rental Cost</b> </div>
+	<p> Base Cost: <span id="base_cost">--</span></p>
+	<p> Discount: <span id="discount">--</span></p>
+	<p> Total Cost: <span id="total_cost">--</span></p>
+	<p>----------------------------------------------------------------------------------</p>
+	 <div class="section-title"><b>Insurance</b></div>
+	<p> Plan: <span id="plan">--</span></p>
+	<p> Cost: <span id="cost">--</span></p>
+	<p>----------------------------------------------------------------------------------</p>
+	 <div class="section-title"><b>Add Ons</b></div>
+	<p> GPS: <span id="gps">--</span></p>
+	<p>Age Surcharge: <span id="age-surcharge">--</span></p>
+	<p> Child Seat: <span id="childSeat">--</span></p>
+	<p>Extra Driver: <span id="extraDriver">--</span></p>
+	<p>----------------------------------------------------------------------------------</p>
+	<div class="section-title"><b>Summary</b></div>
+	<p>Subtotal: $<span id="subtotal">0.00</span></p>
+	<p>You Saved: $<span id="saved">0.00</span></p>
+	<p>Tax (13%): $<span id="tax">0.00</span></p>
+	<p>Security Deposit: $<span id="deposit">0.00</span> (Refundable)</p>
+	<p>----------------------------------------------------------------------------------</p>
+	<h3>TOTAL AMOUNT: $<span id="total-amount">0.00</span></h3>
+	<p>=======================================================================</p>
+	
+	<p>
+		  Note:  
+	<br>  Deposit will be refunded upon safe return of the vehicle.
+	<br>  Late return fee: $20/day may apply in addition to the rental fee per day.
+	</p>
+	<button onclick="window.location.href='index.html'">Back to Home</button>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
+
+

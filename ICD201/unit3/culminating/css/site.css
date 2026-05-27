@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    background: #f4f7fb;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#banner img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.top-nav {
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav {
+    text-decoration: none;
+    color: #555;
+    background: #efefef;
+    padding: 12px 25px;
+    border: 1px solid grey;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.nav:hover {
+    background: #dfeaf5;
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.active {
+    background: #1e4f7a;
+    color: white;
+    border-color: #1e4f7a;
+}
+
+.card,
+.job-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px #D3D3D3;
+}
+
+h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.salary-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.salary {
+    flex: 1;
+    min-width: 180px;
+    background: #2a5298;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 12px;
+}
+
+.salary h3 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.salary p {
+    font-size: 18px;
+}
+
+.stats {
+    width: 100%;
+    margin-top: 20px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+}
+
+.stats td {
+    padding: 18px;
+    text-align: left;
+    font-size: 20px;
+    border: 1px solid #ccc;
+}
+
+.stats th {
+    width: 35%;
+    font-weight: bold;
+    background: #efefef;
+}
+
+.job-card img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+}
+
+.job-card ul,
+.skills-list {
+    padding-left: 22px;
+}
+
+.skills-card-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.skills-card-text {
+    flex: 1;
+}
+
+.skills-card-images {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.skills-card-images img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    display: block;
+}
+
+.footer {
+    background: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}

@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    background: #f4f7fb;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#banner img {
+    width: 100%;
+    display: block;
+}
+
+.top-nav {
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav {
+    text-decoration: none;
+    color: #555;
+    background: #efefef;
+    padding: 12px 25px;
+    border: 1px solid grey;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.nav:hover {
+    background: #dfeaf5;
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.active {
+    background: #1e4f7a;
+    color: white;
+    border-color: #1e4f7a;
+}
+
+.container {
+    width: 80%;
+    padding: 50px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px #D3D3D3;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px #D3D3D3;
+}
+
+.card-row {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.card-row .card {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1e3c72;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid grey;
+    padding: 15px;
+}
+
+.skills-list {
+    padding-left: 22px;
+}
+
+.skills-card-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.skills-card-text {
+    flex: 1;
+}
+
+.skills-card-images {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.skills-card-images img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    display: block;
+}
+
+/* Person images under cards */
+.card .person-image {
+    text-align: center;
+    margin-top: 12px;
+}
+.card .person-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}

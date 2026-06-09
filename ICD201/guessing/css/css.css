@@ -1,0 +1,108 @@
+body{
+    text-align:center;
+    font-family:Arial, sans-serif;
+    background-image:url("../img/burger.jpeg");
+    background-attachment:fixed;
+    background-size:cover;
+    margin:0;
+    padding:20px;
+}
+
+section{
+    border:2px solid black;
+    background-color:white;
+    border-radius:15px;
+    width:450px;
+    margin:auto;
+    padding:10px;
+}
+
+#game{
+    width:900px;
+    margin:auto;
+}
+
+input,
+button,
+label{
+    vertical-align:middle;
+    font-size:18px;
+}
+
+input{
+    width:120px;
+    margin:5px;
+}
+
+button{
+    margin:5px;
+    padding:5px 10px;
+}
+
+#itemImg{
+    width:180px;
+    height:180px;
+    object-fit:contain;
+}
+
+#roundInfo{
+    font-weight:bold;
+}
+
+#jokerArea{
+    width:720px;
+    height:140px;
+    margin:20px auto 0;
+    position:relative;
+}
+
+#joker{
+    width:80px;
+    position:absolute;
+    left:0;
+    top:20px;
+    transition:transform 0.8s linear;
+}
+
+#ruler{
+    width:700px;
+    height:120px;
+    margin:auto;
+    margin-top:10px;
+    border:3px solid black;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:10px;
+    box-sizing:border-box;
+    background:
+        linear-gradient(135deg, #b77a2f 0 24%, transparent 24% 100%),
+        linear-gradient(160deg, #d79b55 0 49%, transparent 49% 100%),
+        linear-gradient(#f8ebc7, #f0d59f);
+}
+
+.mark{
+    width:2px;
+    height:70px;
+    background:black;
+    position:relative;
+}
+
+.mark span{
+    position:absolute;
+    top:75px;
+    left:-22px;
+    width:48px;
+    font-size:12px;
+    background:white;
+}
+
+#status{
+    width:700px;
+    margin:20px auto 0;
+    padding:10px;
+    background:white;
+    border:2px solid black;
+    min-height:48px;
+    box-sizing:border-box;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Match</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<div id="game">
+    <section>
+        <h1>Price Match</h1>
+        <div id="roundInfo">Item 1 of 3</div>
+        <h2 id="itemName"></h2>
+        <img id="itemImg" alt="Current item">
+    </section>
+    <br>
+    <label for="scaleMax">Scale Max:</label>
+    <input
+        id="scaleMax"
+        type="number"
+        min="5"
+        max="10"
+        step="0.50"
+        value="5.00">
+    <button id="applyScale" onclick="applyScaleChange()">APPLY SCALE</button>
+    <br>
+    <input
+        id="guess"
+        type="number"
+        min="0"
+        step="0.01"
+        value="0.00">
+
+    <button id="go" onclick="checkGuess()">GUESS</button>
+    <button id="next" onclick="nextItem()" disabled>NEXT</button>
+    <button id="reset" onclick="resetGame()">RESET</button>
+    <div id="jokerArea">
+        <img id="joker" src="img/clown1.png" alt="Joker">
+    </div>
+    <div id="ruler"></div>
+    <div id="status">
+        Press GUESS after entering a guess.
+    </div>
+</div>
+<audio id="winSound" src="img/win.mp3"></audio>
+<audio id="loseSound" src="img/lose.mp3"></audio>
+<script src="js/js.js"></script>
+</body>
+</html>
+
+

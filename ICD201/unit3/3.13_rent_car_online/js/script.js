@@ -234,7 +234,6 @@ function getParams() {
 	let gps = params.get("gps");
 	let childSeat = params.get("childSeat");
 	let extraDriver = params.get("extraDriver");
-	let insurance = params.get("insurance");
     let subtotal = parseFloat(params.get("subtotal"));
     let age = parseInt(params.get("age"), 10);
 	
@@ -250,7 +249,7 @@ function getParams() {
 		gps: params.get("gps") === "true",
 		childSeat: params.get("childSeat") === "true",
 		extraDriver: params.get("extraDriver") === "true",
-    insurance_rate: parseFloat(params.get("insurance")),
+    insurance_rate: parseFloat(params.get("insurance")) || 0,
     pickupStr: pickupStr,
     returnStr: returnStr,
     age: isNaN(age) ? null : age
@@ -314,4 +313,3 @@ function displayReceipt(){
 	document.getElementById("deposit").innerHTML = depositAmount.toFixed(2);
 	document.getElementById("total-amount").innerHTML = totalamount.toFixed(2);
 }
-  

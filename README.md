@@ -1,12 +1,14 @@
 # Computer Science Coursework Repository
 
-This repository contains my computer science coursework across **all** courses.
+This repository contains my remaining computer science coursework.
 
 ## Repository Structure
-The repository is organized by course and may include but not limited to:
-- Assignments and problem sets
-- Labs and technical exercises
-- Culminating projects
+Coursework is grouped into the following directories:
+
+- `CS50x/` — CS50x notes and exercises.
+- `Misc/` — Small experiments and practice work.
+
+Each course directory contains its own assignments, exercises, and project files.
 
 ## Languages & Technologies
 Coursework in this repository may include:

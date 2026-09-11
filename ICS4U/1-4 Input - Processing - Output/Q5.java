@@ -14,9 +14,12 @@ public class Q5 {
         int b = input.nextInt();
         int c = input.nextInt();
 
-        System.out.println("Sum, Average, Product:");
-        System.out.println(a+b+c);
-        System.out.printf("%d\n", (a+b+c)/3);
-        System.out.println(a*b*c);
+        int sum = a + b + c;
+        double average = sum / 3.0;
+        int product = a * b * c;
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Average: " + average);
+        System.out.println("Product: " + product);
     }
 }

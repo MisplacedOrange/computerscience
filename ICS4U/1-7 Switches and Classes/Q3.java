@@ -51,6 +51,7 @@ public class Q3 {
 
             System.out.println(" day of Christmas, my true love sent to me:");
 
+            // Each case falls through so later verses include earlier gifts.
             switch (day) {
                 case 12:
                     System.out.println("Twelve drummers drumming,");

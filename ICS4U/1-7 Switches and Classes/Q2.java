@@ -8,30 +8,43 @@ public class Q2 {
     public static void main(String[] args) {
 
         for (int i = 0; i < 10; i++) {
-            System.out.println("*".repeat(i));
+            printRow(0, i);
         }
 
         System.out.println();
 
         int i = 10;
         while (i > 0) {
-            System.out.println("*".repeat(i));
+            printRow(0, i);
             i--;
         }
 
         System.out.println();
 
-        int f = 0;
-        for (int j = 10; j > 0; j--) {
-            System.out.println(" ".repeat(f) + "*".repeat(j));
-            f++;
+        int spaces = 0;
+        for (int stars = 10; stars > 0; stars--) {
+            printRow(spaces, stars);
+            spaces++;
         }
 
-        int a = 10, b = 0;
+        spaces = 10;
+        int stars = 0;
         do {
-            System.out.println(" ".repeat(a) + "*".repeat(b));
-            a--;
-            b++;
-        } while (a > 0);
+            printRow(spaces, stars);
+            spaces--;
+            stars++;
+        } while (spaces > 0);
+    }
+
+    private static void printRow(int spaces, int stars) {
+        for (int i = 0; i < spaces; i++) {
+            System.out.print(" ");
+        }
+
+        for (int i = 0; i < stars; i++) {
+            System.out.print("*");
+        }
+
+        System.out.println();
     }
 }

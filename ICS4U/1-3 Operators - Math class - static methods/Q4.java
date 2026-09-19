@@ -1,3 +1,8 @@
+/*
+Author: Roy Lu
+Date: September 11th, 2026
+*/
+
 public class Q4 {
     public static void main(String[] args) {
         int num1 = (int)(Math.random()*6) + 1;

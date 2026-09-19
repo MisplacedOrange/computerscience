@@ -1,3 +1,8 @@
+/*
+Author: Roy Lu
+Date: September 11th, 2026
+*/
+
 public class Q2 {
     public static void main(String[] args) {
         int t1 = 17;

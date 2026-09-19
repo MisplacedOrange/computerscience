@@ -1,3 +1,8 @@
+/*
+Author: Roy Lu
+Date: September 11th, 2026
+*/
+
 public class Q7 {
     public static double degreetoradian (double deg) {
         double rad = deg * Math.PI/180;

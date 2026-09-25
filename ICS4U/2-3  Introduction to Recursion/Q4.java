@@ -10,11 +10,11 @@ public class Q4 {
         System.out.println(answer);
     }
 
-    public static int sum ( int n ) {
-        if (n == 0)
+    // Precondition: n is not negative.
+    public static int sum(int n) {
+        if (n == 0) {
             return 0;
-        else
-            return n + sum(n - 1);
-
+        }
+        return n + sum(n - 1);
     }
 }

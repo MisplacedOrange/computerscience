@@ -11,11 +11,11 @@ public class Q5 {
         System.out.println(result);
     }
 
+    // Precondition: exponent is not negative.
     public static int power(int base, int exponent) {
-        if (exponent == 1) {
-            return base;
-        } else {
-            return base * power(base, exponent - 1);
+        if (exponent == 0) {
+            return 1;
         }
+        return base * power(base, exponent - 1);
     }
 }

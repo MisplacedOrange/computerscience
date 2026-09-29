@@ -10,7 +10,10 @@ public class Q3 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        String userLine = input.nextLine();
+        String userLine = input.nextLine().trim();
+        if (userLine.isEmpty()) {
+            return;
+        }
         String[] words = userLine.split("\\s+");
 
         for (String word : words) {

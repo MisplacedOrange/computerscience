@@ -10,12 +10,23 @@ public class Q2 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        String userLine = input.nextLine();
+        String userLine = input.nextLine().trim();
+        if (userLine.isEmpty()) {
+            return;
+        }
         String[] words = userLine.split("\\s+");
 
         for (String word : words) {
-            if (word.chars().anyMatch(Character::isDigit)) {}
-            else {
+            boolean containsDigit = false;
+
+            for (int i = 0; i < word.length(); i++) {
+                if (Character.isDigit(word.charAt(i))) {
+                    containsDigit = true;
+                    break;
+                }
+            }
+
+            if (!containsDigit) {
                 System.out.println(word);
             }
         }

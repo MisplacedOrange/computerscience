@@ -14,7 +14,12 @@ public class Q6 {
         if (line.isEmpty()) {
             return 0;
         }
-        return (line.charAt(0) == c ? 1 : 0)
-                + count(line.substring(1), c);
+
+        int countForFirstCharacter = 0;
+        if (line.charAt(0) == c) {
+            countForFirstCharacter = 1;
+        }
+
+        return countForFirstCharacter + count(line.substring(1), c);
     }
 }

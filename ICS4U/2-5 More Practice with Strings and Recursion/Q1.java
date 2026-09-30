@@ -1,7 +1,7 @@
 /*
 Author: Roy Lu
 Date: September 30th, 2026
-Description: Demonstrates common Character class methods for checking, converting, and comparing characters.
+Description: Demonstrates common Character class methods for checking and converting characters, and the == operator for comparing chars.
 */
 
 public class Q1 {
@@ -18,8 +18,6 @@ public class Q1 {
         System.out.println("isUpperCase('G'): " + Character.isUpperCase(letter));
         System.out.println("toUpperCase('g'): " + Character.toUpperCase(lowercase));
         System.out.println("toLowerCase('G'): " + Character.toLowerCase(letter));
-        System.out.println(
-                "Character.valueOf('G').equals(Character.valueOf('G')): "
-                        + Character.valueOf('G').equals(Character.valueOf('G')));
+        System.out.println("letter == 'G': " + (letter == 'G'));
     }
 }

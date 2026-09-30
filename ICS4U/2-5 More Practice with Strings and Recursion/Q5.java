@@ -16,8 +16,9 @@ public class Q5 {
         }
         char first = line.charAt(0);
         String rest = compact(line.substring(1));
-        return first == ' '
-                ? rest
-                : first + rest;
+        if (first == ' ') {
+            return rest;
+        }
+        return first + rest;
     }
 }

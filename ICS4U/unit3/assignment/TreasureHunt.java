@@ -1,9 +1,12 @@
 /*
-Authors: Dinesh Sinnathamby
+Authors: Dinesh Sinnathamby, Roy Lu
 Date: November 3rd, 2026
 Description: The TreasureHunt class file, containing all methods, variables, and logic for the game.
 */
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,9 +14,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 
 /**
  * Manages the board, player rewards, mine relocation, and saved scores.
